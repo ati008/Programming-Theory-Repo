@@ -7,9 +7,12 @@ using UnityEngine.UI;
 
 public class MenuUIHandler : MonoBehaviour
 {
+  private VehiclePicker picker;
   private void Start()
   {
-    GameManager.Instance.selectedVehicleIndex = 1;
+    picker = GameObject.FindObjectOfType<VehiclePicker>();
+    picker.onSelectionChanged += (v) => GameManager.Instance.selectedVehicle = v;
+
   }
   public void StartNew()
   {
