@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class MenuUIHandler : MonoBehaviour
 {
+  private void Start()
+  {
+    GameManager.Instance.selectedVehicleIndex = 1;
+  }
   public void StartNew()
   {
     SceneManager.LoadScene(1);
