@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-  public GameObject[] Vehicles;
   // Start is called before the first frame update
   void Start()
   {
-    var vehicle = Vehicles[GameManager.Instance.selectedVehicleIndex];
+    var vehicle = GameManager.Instance.selectedVehicle;
     Instantiate(vehicle, transform.position, vehicle.transform.rotation);
   }
 
