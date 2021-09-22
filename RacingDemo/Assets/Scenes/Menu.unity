@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 59478342}
   - component: {fileID: 59478341}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -789,6 +789,7 @@ RectTransform:
   - {fileID: 59478340}
   - {fileID: 237976818}
   - {fileID: 105061640}
+  - {fileID: 1001998518}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -880,6 +881,96 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1001998517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1001998518}
+  - component: {fileID: 1001998519}
+  - component: {fileID: 1001998521}
+  - component: {fileID: 1001998520}
+  m_Layer: 5
+  m_Name: VehiclePicker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1001998518
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001998517}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 959285395}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 40.9976}
+  m_SizeDelta: {x: 235.9393, y: 38.144}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1001998519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001998517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ca9c3108fb71a449e4b268c638763c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvailableVehicles:
+  - {fileID: 5758954388308096007, guid: b64437ada037ae34292a46ed281860d4, type: 3}
+  - {fileID: 642263468901373735, guid: 0a59b17e9ef3610419c56e36452dbe59, type: 3}
+  - {fileID: 4951456869278965634, guid: ceefe39b467abe748924ec3e1c0dea07, type: 3}
+  - {fileID: 9083105611780178994, guid: a9ec7a2f8989bd3489ba7886a1e186ef, type: 3}
+  VehicleButtonPrefab: {fileID: 4751208766213273738, guid: e5c970f01beeb9e44b42c86b27454504, type: 3}
+--- !u!114 &1001998520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001998517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!222 &1001998521
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001998517}
+  m_CullTransparentMesh: 1
 --- !u!1 &1052466361
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ccac7a9685bb8439338e8bf87d0485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedVehicle: {fileID: 0}
 --- !u!4 &1052466363
 Transform:
   m_ObjectHideFlags: 0
