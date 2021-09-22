@@ -33,7 +33,8 @@ public class VehiclePicker : MonoBehaviour
 
         newButton.interactable = false;
 
-        onSelectionChanged.Invoke(SelectedVehicle);
+        if (onSelectionChanged != null && SelectedVehicle != null)
+          onSelectionChanged.Invoke(SelectedVehicle);
       });
 
       m_VehicleButtons.Add(newButton);

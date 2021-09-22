@@ -4,22 +4,55 @@ using UnityEngine;
 
 public class Vehicle : MonoBehaviour
 {
-  public virtual float speed { get; private set; } = 20.0f;
-  public virtual float turnSpeed { get; private set; } = 45.0f;
   float horizontalInput;
   float forwardInput;
+  float speedField = 20.0f;
+  float turnSpeedField = 45.0f;
+
+  //Encapsulation
+  [SerializeField]
+  public virtual float speed
+  {
+    get
+    {
+      return speedField;
+    }
+    set
+    {
+      if (value > 0)
+        speedField = value;
+
+    }
+  }
+  //Encapsulation
+  [SerializeField]
+  public virtual float turnSpeed
+  {
+    get
+    {
+      return turnSpeedField;
+    }
+    set
+    {
+      if (value > 0)
+        turnSpeedField = value;
+
+    }
+  }
 
   private void LateUpdate()
   {
     Turn();
     Move();
   }
-  public void Turn()
+  //Abstraction
+  protected virtual void Turn()
   {
     horizontalInput = Input.GetAxis("Horizontal");
     transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
   }
-  public void Move()
+  //Abstraction
+  protected virtual void Move()
   {
     forwardInput = Input.GetAxis("Vertical");
     transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
