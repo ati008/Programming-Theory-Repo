@@ -40,7 +40,10 @@ public class VehiclePicker : MonoBehaviour
       m_VehicleButtons.Add(newButton);
     }
     if (GameManager.Instance.selectedVehicle == null)
+    {
       SelectVehicle(AvailableVehicles[0]);
+      GameManager.Instance.selectedVehicle = SelectedVehicle;
+    }
     else
       SelectVehicle(GameManager.Instance.selectedVehicle);
   }

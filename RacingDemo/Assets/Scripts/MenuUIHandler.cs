@@ -12,7 +12,6 @@ public class MenuUIHandler : MonoBehaviour
   {
     picker = GameObject.FindObjectOfType<VehiclePicker>();
     picker.onSelectionChanged += (v) => GameManager.Instance.selectedVehicle = v;
-
   }
   public void StartNew()
   {
